@@ -4,30 +4,40 @@
       rgba(47, 48, 58, 0.4)
     ),
     url(../images/Hero.jpg);
-  padding: 200px 0;
+  padding: 118px 0;
   max-width: 1600px;
   margin: 0 auto;
   background-color: #c4c4c4;
   background-repeat: no-repeat;
   text-align: center;
   background-size: cover;
+
+  @media screen and (min-width: 1200px) {
+    padding: 200px 0;
+  }
 }
 
 .hero__title {
-  max-width: 696px;
+  max-width: 360px;
   margin: 0 auto;
   margin-bottom: 30px;
   color: $primary-white-color;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  @media screen and (min-width: 1200px) {
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.37;
+  }
 }
 
 .hero__button-primary {
-  padding: 10px 32px;
+  padding: 10px 24px;
   color: $primary-white-color;
   background-color: $accent-color;
   font-family: inherit;
@@ -48,5 +58,9 @@
     color: $primary-white-color;
     background-color: #188ce8;
     outline: none;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 10px 32px;
   }
 }

@@ -4,9 +4,23 @@
   background-color: $bg-color;
   line-height: 1.71;
 
-  & .container {
-    display: flex;
-    align-items: baseline;
+  @media screen and (max-width: 480px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    & .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    & .container {
+      display: flex;
+      align-items: baseline;
+    }
   }
 }
 .page-footer__logo-web {
@@ -40,6 +54,12 @@
   }
 }
 
+.page-footer__main-contacts {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    text-align: center;
+  }
+}
+
 .page-footer__mail {
   display: block;
   margin-bottom: 9px;
@@ -53,10 +73,25 @@
   text-transform: uppercase;
   color: $primary-white-color;
   margin-bottom: 20px;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .page-footer__social {
-  margin-left: 70px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-left: 165px;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
 }
 
 .social-networks__footer-list {
@@ -93,7 +128,13 @@
 }
 
 .page-footer__footer-subscribe {
-  margin-left: 93px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-top: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
 }
 
 .page-footer__input {
@@ -107,7 +148,6 @@
   color: $primary-white-color;
   background-color: $bg-color;
   outline: none;
-  margin-right: 12px;
   padding: 15px 16px;
   cursor: pointer;
 
@@ -119,10 +159,24 @@
     align-items: center;
     color: $secondary-text-color;
   }
+
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    width: 450px;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 12px;
+  }
 }
 
 .page-footer__btns {
   display: flex;
+
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .page-footer__submit {

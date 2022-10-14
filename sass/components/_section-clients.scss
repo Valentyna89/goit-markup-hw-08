@@ -14,12 +14,13 @@
 
   color: $title-text-color;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
 
   @media screen and (min-width: 1200px) {
     margin-bottom: 50px;
+    font-size: 36px;
   }
 }
 
@@ -30,12 +31,20 @@
 
   @media screen and (min-width: 1200px) {
     display: flex;
-    justify-content: space-between;
   }
 }
 
 .section-clients__item {
-  justify-content: space-between;
+  
+  flex-basis: calc((100% - 60px) / 2);
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 90px) / 3);
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 180px) / 6);
+  }
 }
 
 .section-clients__link {
