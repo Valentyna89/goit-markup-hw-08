@@ -28,7 +28,8 @@ ul {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
+  height: auto;
 }
 
 p {
@@ -324,18 +325,41 @@ a {
 }
 
 .hero {
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Hero.jpg);
-  padding: 118px 0;
-  max-width: 1600px;
-  margin: 0 auto;
-  background-color: #c4c4c4;
-  background-repeat: no-repeat;
   text-align: center;
+  margin: 0 auto;
+  max-height: 400px;
+  background-color: #c4c4c4;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/mobile/hero.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 1600px;
+  padding: 118px 0;
+}
+@media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/mobile/hero2x.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/tablet/hero.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/tablet/hero2x.jpg);
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero {
+    max-height: 600px;
     padding: 200px 0;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/desktop/hero.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/desktop/hero2x.jpg);
   }
 }
 
@@ -774,7 +798,6 @@ a {
   .portfolio__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
   }
 }
 @media screen and (min-width: 768px) {
