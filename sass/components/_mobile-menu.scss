@@ -25,12 +25,12 @@
 
 .mobile-menu {
   position: fixed;
-  width: 100%;
+  min-width: 320px;
   height: 100%;
   left: 0;
   top: 0;
   background-color: $primary-white-color;
-  padding: 48px 0 48px 40px;
+  padding: 48px 0 48px 10px;
   z-index: 3;
   .container {
     position: relative;
@@ -43,11 +43,17 @@
     opacity: 0;
     pointer-events: none;
   }
-}
 
-// .mobile-menu-list {
-//   margin-bottom: 302px;
-// }
+  @media screen and (max-width: 479px) {
+    width: 100%;
+    max-width: 479px;
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    width: 100%;
+    height: 100%;
+  }
+}
 
 .mobile-menu-list__link {
   font-weight: 500;
@@ -101,6 +107,7 @@
 
 .mobile-menu-social {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .mobile-menu-social__link {
